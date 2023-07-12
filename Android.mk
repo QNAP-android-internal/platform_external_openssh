@@ -140,9 +140,10 @@ LOCAL_SRC_FILES := \
 LOCAL_C_INCLUDES := \
     external/zlib \
     external/openssl/include \
-    external/openssh/openbsd-compat
+    external/openssh/openbsd-compat \
+    system/core/libcutils/include
 
-LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz
+LOCAL_SHARED_LIBRARIES += libssl libcrypto libdl libz libandroidfw
 
 LOCAL_MODULE := libssh
 
@@ -181,9 +182,10 @@ LOCAL_CLANG_CFLAGS += $(openssh_common_clang_cflags)
 LOCAL_C_INCLUDES := \
     external/zlib \
     external/openssl/include \
-    external/openssh/openbsd-compat
+    external/openssh/openbsd-compat \
+    system/core/libcutils/include
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libandroidfw
 
 include $(BUILD_EXECUTABLE)
 
@@ -206,7 +208,7 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libandroidfw
 
 include $(BUILD_EXECUTABLE)
 
@@ -229,7 +231,7 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libandroidfw
 
 include $(BUILD_EXECUTABLE)
 
@@ -290,7 +292,7 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libcutils
+LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libcutils libandroidfw
 
 include $(BUILD_EXECUTABLE)
 
@@ -313,7 +315,7 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
     external/openssh/openbsd-compat
 
-LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz
+LOCAL_SHARED_LIBRARIES += libssh libssl libcrypto libdl libz libandroidfw
 
 include $(BUILD_EXECUTABLE)
 

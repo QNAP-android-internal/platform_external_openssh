@@ -183,10 +183,6 @@ void DH_get0_key(const DH *dh, const BIGNUM **pub_key, const BIGNUM **priv_key);
 int DH_set0_key(DH *dh, BIGNUM *pub_key, BIGNUM *priv_key);
 #endif /* HAVE_DH_SET0_KEY */
 
-#ifndef HAVE_DH_SET_LENGTH
-int DH_set_length(DH *dh, long length);
-#endif /* HAVE_DH_SET_LENGTH */
-
 #ifndef HAVE_RSA_METH_FREE
 void RSA_meth_free(RSA_METHOD *meth);
 #endif /* HAVE_RSA_METH_FREE */

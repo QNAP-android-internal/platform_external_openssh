@@ -512,18 +512,6 @@ DH_set0_key(DH *dh, BIGNUM *pub_key, BIGNUM *priv_key)
 }
 #endif /* HAVE_DH_SET0_KEY */
 
-#ifndef HAVE_DH_SET_LENGTH
-int
-DH_set_length(DH *dh, long length)
-{
-	if (length < 0 || length > INT_MAX)
-		return 0;
-
-	dh->priv_length = length;
-	return 1;
-}
-#endif /* HAVE_DH_SET_LENGTH */
-
 #ifndef HAVE_EVP_MD_CTX_NEW
 EVP_MD_CTX *
 EVP_MD_CTX_new(void)
